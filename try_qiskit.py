@@ -5,7 +5,7 @@ import subprocess
 
 client = ollama.Client()
 model = "qwen2.5-coder:0.5b"  # Replace with your model name
-prompt = "Write a Qiskit function to create a quantum circuit that generates an equal superposition on n qubits. Do not include measurements. The name of the function should be gen_qode(). Include a main function to test the function with a command line argument of n and print the quantum citcuit generated."
+prompt = "Write a Qiskit function to create a quantum circuit that generates an equal superposition on n qubits. Do not include measurements. The name of the function should be gen_qode(). Include a main function to test the function with a command line argument of n and print the quantum circuit generated. Import required libraries only."
 response = client.generate(model=model, prompt=prompt)
 
 def extract_and_save(full_response, fname = "gen_qode"):
